@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Fira Sans", serif;
+    background-color: #fff;
+}
+
+.pesquisa {
+    border: none;
+    padding: 10px;
+    background-color: #684A43;
+    border-radius: 20px;
+}
+
+header {
+    box-shadow: 0px 10px 20px #BFAC95;
+    padding: 0.5rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+header nav ul a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #684A43;
+}
+
+nav img {
+    width: 55px;
+    height: auto;
+}
+
+.pesquisa::placeholder {
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.login-cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.login-cadastro a {
+    text-decoration: none;
+    color: #684A43;
+    font-weight: 500;
+}
+
+#cadastro {
+    color: #FFFFFF;
+    padding: 4px 14px;
+    background-color: #684A43;
+    border-radius: 20px;
+}
+
+@media (max-width: 800px) {
+    header nav ul a {
+        font-size: 0.8rem;
+    }
+
+    header nav ul {
+        gap: 15px;
+    }
+
+    nav img {
+        width: 40px;
+        height: auto;
+    }
+
+    .pesquisa {
+        font-size: 0.5em;
+        padding: 10px 5px;
+    }
+
+    header nav {
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header nav ul a {
+        font-size: 0.6rem;
+    }
+
+    header nav ul {
+        gap: 10px;
+    }
+
+    nav img {
+        width: 30px;
+        height: auto;
+    }
+
+    .pesquisa {
+        font-size: 0.4em;
+        padding: 6px 2px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header nav ul a {
+        font-size: 0.5rem;
+    }
+
+    header nav ul {
+        gap: 10px;
+    }
+
+    nav img {
+        width: 25px;
+        height: auto;
+    }
+
+    .pesquisa {
+        font-size: 0.4em;
+        padding: 6px 2px;
+    }
+
+    header nav {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    header {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 380px) {
+
+
+    header nav ul a {
+        font-size: 0.4rem;
+    }
+
+    header nav ul {
+        gap: 5px;
+    }
+
+    nav img {
+        width: 20px;
+        height: auto;
+    }
+
+    .pesquisa {
+        font-size: 0.3em;
+        padding: 4px 1px;
+    }
+
+    header nav {
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+    }
+
+    header {
+        padding: 0.5rem;
+    }
+}
