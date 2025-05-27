@@ -26,8 +26,8 @@ router.get("/sou-professor", (req, res) => {
   res.render("pages/home/sou-professor");
 });
 
-router.get("/suporte", (req, res) => {
-  res.render("pages/home/h-suporte");
+router.get("/fale-conosco", (req, res) => {
+  res.render("pages/home/fale-conosco");
 });
 
 // Rotas Institucionais

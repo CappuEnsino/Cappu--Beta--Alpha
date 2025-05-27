@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cappuensino - Contato</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fale-conosco.css">
+    <link rel="stylesheet" href="/css/global_home.css" />
+</head>
+<body>
+    <header>
+        <nav>
+          <section>
+            <a href="/"
+              ><img src="../Images/logo.png" alt=""
+            /></a>
+          </section>
+          <form class="" action="">
+            <input
+              class="pesquisa"
+              type="search"
+              placeholder="Pesquise por cursos..."
+            />
+          </form>
+          <ul>
+            <li><a href="/quemsomos">Sobre</a></li>
+            <li><a href="/cursos">Cursos</a></li>
+            <li><a href="/planos">Planos</a></li>
+            <li><a href="/sou-aluno">Aluno</a></li>
+            <li><a href="/sou-professor">Professor</a></li>
+          </ul>
+          <section class="login-cadastro">
+            <a href="auth/cl-loginmain">Login</a>
+            <a id="cadastro" href="auth/cl-cadastro">Cadastre-se</a>
+          </section>
+        </nav>
+      </header>
+
+    <div class="main-container">
+        <!-- Formulário à esquerda -->
+        <div class="form-section">
+            <div class="form-content">                
+                <div class="form-container">
+                    <h2 class="form-title">Fale Conosco</h2>
+                    <p class="form-subtitle">Preencha o formulário abaixo e entraremos em contato</p>
+                    
+                    <form class="modern-form">
+                        <div class="input-group">
+                            <input type="text" id="nome" required>
+                            <label for="nome">Nome Completo</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input type="email" id="email" required>
+                            <label for="email">E-mail</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        
+                        <div class="input-group textarea-group">
+                            <textarea id="mensagem" required></textarea>
+                            <label for="mensagem">Sua Mensagem</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        
+                        <button type="submit" class="modern-btn">
+                            <span>ENVIAR MENSAGEM</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Imagem à direita -->
+        <div class="image-section">
+            <img src="/images/contate-nos.svg" alt="Ilustração de contato" class="contact-illustration">
+        </div>
+    </div>
+
+    <!-- Footer fixo -->
+    <footer class="site-footer">
+        <p>© 2024 Cappuensino. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

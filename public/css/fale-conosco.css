@@ -1,0 +1,316 @@
+:root {
+    --primary-color: #684A43;
+    --secondary-color: #7a4202;
+    --accent-color: #684A43;
+    --text-color: #2b2d42;
+    --light-gray: #f8f9fa;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--light-gray);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 70px;
+}
+
+.main-container {
+    display: flex;
+    flex: 1;
+    min-height: calc(100vh - 70px);
+}
+
+/* Seção do Formulário (esquerda) */
+.form-section {
+    flex: 1;
+    display: flex;
+    padding: 4rem;
+    padding-top: 8rem;
+}
+
+.form-content {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.form-container {
+    width: 100%;
+}
+
+.form-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #684A43;
+}
+
+.form-subtitle {
+    color: #6c757d;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Formulário Moderno */
+.modern-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 1rem 1rem 1rem 0;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid #ced4da;
+    background-color: transparent;
+    transition: var(--transition);
+    color: var(--text-color);
+}
+
+.input-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.input-group label {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    color: #6c757d;
+    transition: var(--transition);
+    pointer-events: none;
+    font-weight: 400;
+}
+
+.input-group .focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-bottom-color: transparent;
+}
+
+.input-group input:focus ~ .focus-border,
+.input-group textarea:focus ~ .focus-border {
+    width: 100%;
+}
+
+.input-group input:focus ~ label,
+.input-group textarea:focus ~ label,
+.input-group input:valid ~ label,
+.input-group textarea:valid ~ label {
+    top: -1.2rem;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+}
+
+/* Botão Moderno */
+.modern-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 1rem;
+    width: 100%;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.modern-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(106, 74, 67, 0.3);
+}
+
+.modern-btn svg {
+    transition: var(--transition);
+}
+
+.modern-btn:hover svg {
+    transform: translateX(5px);
+}
+
+/* Seção da Imagem (direita) */
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.contact-illustration {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Footer fixo */
+.site-footer {
+    background-color: var(--accent-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    font-weight: 500;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.site-footer p {
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+/* Animação */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* ================= RESPONSIVIDADE ================= */
+
+/* Tablet (768px a 1024px) */
+@media (max-width: 1024px) {
+    .form-section {
+        padding: 3rem;
+        padding-top: 6rem;
+    }
+    
+    .image-section {
+        padding: 1.5rem;
+    }
+    
+    .contact-illustration {
+        width: 90%;
+    }
+}
+
+/* Dispositivos móveis (até 768px) */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .form-section {
+        padding: 2rem;
+        padding-top: 4rem;
+        order: 2; /* Formulário embaixo */
+    }
+    
+    .image-section {
+        padding: 2rem;
+        order: 1; /* Imagem em cima */
+        min-height: 50vh;
+    }
+    
+    .logo {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-title {
+        font-size: 1.7rem;
+    }
+    
+    .contact-illustration {
+        width: 70%;
+        max-width: 400px;
+    }
+    
+    body {
+        padding-bottom: 60px;
+    }
+}
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+    .form-section {
+        padding: 1.5rem;
+        padding-top: 3rem;
+    }
+    
+    .image-section {
+        padding: 1.5rem;
+        min-height: 40vh;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .form-title {
+        font-size: 1.4rem;
+    }
+    
+    .form-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .modern-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .site-footer {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+}
