@@ -221,9 +221,11 @@ router.get("/pomodoro", (req,res) => {
   });
 });
 
-// Rotas para a Home
 router.get("/cursos", (req,res) => {
-  res.render("pages/home/cursos");
+  res.render("dashboard/aluno/cursos", {
+    user : req.user,
+    title : "Comprar Cursos",
+  });
 });
 
 router.post("/resumo/save", (req, res) => {
